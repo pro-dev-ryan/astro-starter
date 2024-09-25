@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from "astro";
+
+ export const getStaticPaths = (() => {
+    return [
+        {
+            params: {id: 1},
+            props: {dog: "berry"}
+        },
+        {
+            params: {id: 2},
+            props: {dog: "perry"}
+        },
+        {
+            params: {id: 3},
+            props: {dog: "jerry"}
+        }
+    ];
+}) satisfies GetStaticPaths;
+
+const data = Astro.props
+---
+<div>
+ <h4>I am {data.dog}</h4>
+</div>
+
+<style>
+
+</style>

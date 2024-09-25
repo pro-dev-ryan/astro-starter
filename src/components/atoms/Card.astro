@@ -1,0 +1,33 @@
+---
+interface blogProps {
+  id: number,
+  title: string,
+  author?: string,
+  body: string,
+  date: string,
+  tags: string[]
+}
+import Link from "@component/atoms/Link.astro";
+import { formatDate } from "src/scripts/utils";
+
+const {item} = Astro.props;
+
+const {title, body, tags, author, date, id} = item as blogProps;
+
+---
+
+<a href={`/blog/${id}`}>
+<div class="card overflow-hidden h-full">
+          <figure class="overflow-hidden">
+            <img src="https://s46675.pcdn.co/wp-content/uploads/2015/12/nigth-cityscape-01.jpg" alt="" class="w-full h-[300px] transition-transform scale-110">
+          </figure>
+          <div class="p-4">
+          <h5>{title} <span class="pl-2 tracking-tight text-base text-[var(--body-text)]">By</span></h5>
+          <small>{author ? author : "Mr. Author"} || Published At {date && formatDate(date)}</small>
+          <div class="flex flex-col justify-between h-full">
+            <p class="mt-4">{body.length > 100 && body.split("",100 ).join("") }...</p>
+          <Link text="Read More" href="/" icon={{name: "carbon:text-long-paragraph", side: "right"}} classes="flex gap-2 !px-0 font-semibold w-fit"/>
+          </div>
+          </div>
+</div>
+</a>

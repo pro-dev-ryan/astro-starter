@@ -1,0 +1,29 @@
+---
+import Link from "@component/atoms/Link.astro"
+const links = [
+    {title: "Home", link: "/"},
+    {title: "About", link: "/about"},
+    {title: "Projects", link: "/projects"},
+    {title: "Services", link: "/services"},
+    {title: "Contact", link: "/contact"},
+]
+
+
+---
+<ul class="flex flex-col justify-start items-end lg:flex-row gap-x-[1.375rem] md:gap-x-[33px] 2xl:gap-x-11 space-y-6 lg:space-y-0 mt-6 lg:mt-0">
+    {links.map((item,i)=> <li>
+      <Link text={item.title} href={item.link} data-navLink/>
+    </li>)}
+  </ul>
+
+
+  <script>
+    const links = document.querySelectorAll("[data-navLink]");
+    links.forEach(item => {if(item.getAttribute('href') === window?.location?.pathname){
+      item.setAttribute("aria-page","current")
+      }
+
+    }
+  )
+  </script>
+

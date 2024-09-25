@@ -1,16 +1,13 @@
 ---
-
+import Home from "../components/pages/Home.astro";
+import BaseLayout from "../layouts/baseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Homepage">
+  <Home />
+</BaseLayout>
+
+
+
+
+<!-- class Bank: def __init__(self,balance): self.balance = balance self.min_withdraw = 100 self.max_withdraw = 100000 def get_balance(self): return self.balance def deposit(self,amount): if amount > 0: self.balance += amount def withdraw(self,amount): if amount < self.max_withdraw: return f'Your withdrawal amount is not permitted!!!' else: self.balance -= amount return f'Transaction successful' -->

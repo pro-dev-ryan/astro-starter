@@ -1,0 +1,19 @@
+---
+import Paths from "./paths.astro";
+import MobNav from "@component/react/MobNav.jsx"
+---
+
+<nav aria-label="Primary" class="content-panel !pb-0 !max-w-[1000px]">
+ <div class="flex justify-between items-center mt-5 md:mt-[30px] 2xl:mt-10 py-3 md:py-[18px] 2xl:py-6">
+   <a href="/" aria-label="go home" class="w-[91px] md:w-[136px] 2xl:w-[182px] h-[29px] md:h-[44px] 2xl:h-[58px] object-cover px-0">
+    <img src="/image/Logo.png" class="w-full object-cover" alt="" />
+  </a>
+  <div class="hidden gap-[1.4375rem] md:gap-[2.15625rem] 2xl:gap-[46px] lg:flex items-center">
+    <Paths />
+  <button class="outlined_tartiary hidden lg:block relative">Contact US</button>
+  </div>
+ <MobNav client:only="react">
+  <Paths />
+ </MobNav>
+ </div>
+</nav>

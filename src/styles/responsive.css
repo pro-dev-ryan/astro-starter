@@ -1,0 +1,37 @@
+@media only screen and (min-width: 540px) and (max-width: 639px) {
+  h1 {
+    font-size: 3rem;
+    width: clamp(520px, 55vw, 590px);
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+  h1 {
+    font-size: 3.7rem;
+    width: clamp(640px, 35vw, 680px);
+  }
+}
+@media only screen and (min-width: 961px) and (max-width: 1280px) {
+  h1 {
+    font-size: 5rem;
+    width: clamp(860px, 45vw, 920px);
+  }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1534px) {
+  h1 {
+    font-size: 6.6rem;
+    width: clamp(1080px, 30vw, 1120px);
+  }
+}
+
+@media only screen and (min-width: 1535px) {
+  h1 {
+    font-size: clamp(6.8rem, 6vw, 8.5rem);
+    width: clamp(1200px, 55vw, 1320px);
+  }
+
+  p,
+  a {
+    font-size: 20px;
+  }
+}

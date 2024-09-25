@@ -1,0 +1,94 @@
+---
+
+---
+<div class="bg-white rounded-md w-[320px] md:w-[40%] 2xl:w-[660px] h-[50px] md:max-h-[75px] 2xl:max-h-[100.71px] mt-16 flex items-center justify-between relative overflow-hidden">
+  <div class="marquee--inner">
+    <div class="inner-div">
+      <img src="/image/slack.png"  class="object-cover orb" alt="">
+
+
+        <img src="/image/gdrive.png" class="object-cover orb" alt="">
+
+
+        <img src="/image/trello.png" class="object-cover orb" alt="">
+    </div>
+    <div class="inner-div">
+      <img src="/image/slack.png"  class="object-cover orb" alt="">
+
+
+        <img src="/image/gdrive.png" class="object-cover orb" alt="">
+
+
+        <img src="/image/trello.png" class="object-cover orb" alt="">
+    </span>
+
+  </div>
+</div>
+
+<style>
+
+.orb {
+  display: inline-block;
+  margin: 0 35px;
+  float: left;
+  filter:grayscale(100%);
+  transition: all .2s ease-out;
+}
+
+.orb:hover {
+  filter:grayscale(0%);
+  cursor: pointer;
+}
+
+.marquee--inner {
+  display: inline-block;
+  width: 340%;
+  margin: 0px 45px;
+  position: absolute;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee--inner:hover {
+  animation-play-state: paused;
+}
+
+/*.half {
+  float: left;
+  width: 10%;
+}*/
+
+.inner-div {
+  float: left;
+  display: inline-flex;
+  align-items: center;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -170%; }
+}
+
+@media screen and (min-width:1024px) {
+  .orb {
+      margin: 0 40px;
+  }
+
+  .marquee--inner {
+    width: 250%;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+  0% { left: 0; }
+  100% { left: -125%; }
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .orb {
+      margin: 0 clamp(50px, 3vw + 5px, 80px);
+  }
+}
+
+</style>

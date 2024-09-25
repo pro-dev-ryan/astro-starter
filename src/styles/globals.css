@@ -1,0 +1,82 @@
+/***************** Typography  ******************/
+
+/* headings */
+h1 {
+  @apply text-secondary 2xl:text-7xl xl:text-6xl md:text-5xl text-[2.5rem] tracking-normal md:tracking-tight leading-none font-semibold;
+}
+/* others heading styles in the global.css file  */
+p,
+a,
+button {
+  @apply text-sm lg:text-base 2xl:text-lg;
+}
+
+.link {
+  @apply transition-all bg-transparent text-[var(--body-text)] hover:text-primary/90 px-3 md:px-[1.125rem] py-2 md:py-3 2xl:px-6 2xl:py-4;
+}
+
+/****************** colors  ******************/
+/*  active elements  */
+[aria-page="current"] {
+  @apply font-semibold text-primary;
+}
+
+button:active {
+  @apply scale-95 transition-transform;
+}
+/************ solid *************/
+
+.outline_btn {
+  @apply border-2 rounded-md drop-shadow hover:drop-shadow-none bg-transparent;
+}
+
+.primary {
+  @apply text-white bg-[var(--primary)] hover:text-[var(--theme-color)] hover:bg-primary/70;
+}
+
+.secondary {
+  @apply text-white bg-[var(--secondary)] hover:text-[var(--theme-color)] hover:bg-secondary/70;
+}
+
+.tartiary {
+  @apply bg-white hover:text-[var(--theme-color)] hover:bg-[var(--dark-color)];
+}
+
+/*------------- outlined  --------*/
+.outlined_primary {
+  @apply outline_btn text-[var(--primary)] border-primary hover:text-[var(--dark-color)] hover:border-[var(--dark-color)];
+}
+
+.outlined_secondary {
+  @apply outline_btn text-[var(--secondary)] border-secondary/70 hover:text-[var(--dark-color)] hover:border-[var(--dark-color)] font-semibold;
+}
+
+.outlined_tartiary {
+  @apply outline_btn text-[var(--base-color)] border-white hover:border-[var(--base-color)] font-semibold;
+}
+
+/****************** components  ******************/
+
+/* buttons  */
+
+button {
+  @apply transition-all duration-150 rounded-md px-3 md:px-[1.125rem] py-2 md:py-3 2xl:px-6 2xl:py-4 shadow-lg hover:shadow-none;
+}
+
+/* cards  */
+
+.card {
+  @apply cursor-pointer rounded-md drop-shadow border-white border w-[450px] space-y-4 h-[600px];
+}
+
+/* containers  */
+
+.content-panel {
+  @apply w-full max-w-[1320px] mx-auto px-3 xl:px-8 pb-10 md:pb-[118px] 2xl:pb-[157px];
+}
+
+.element-panel {
+  @apply w-full max-w-[1920px] mx-auto;
+}
+
+/* input fields  */

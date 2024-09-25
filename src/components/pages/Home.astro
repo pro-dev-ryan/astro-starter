@@ -1,0 +1,41 @@
+---
+import Link from "@component/atoms/Link.astro";
+import Card from "@component/atoms/Card.astro"
+---
+
+  <section class="element-panel">
+    <div class="content-panel">
+      <h1 class="">Heading-H1</h1>
+      <h2>Heading-H2</h2>
+      <h3>Heading-H3</h3>
+      <h4>Heading-H4</h4>
+      <h5>Heading-H5</h5>
+      <h6>Heading-H6</h6>
+      <p>This Is Paragraph</p>
+      <div class="flex items-center mt-10">
+        <div class="w-full ">
+          <h3 class="mb-5">Solid Buttons</h3>
+          <div class="flex items-center justify-center gap-5">
+        <button class="primary">Button Here</button>
+        <button class="secondary">Button Here</button>
+        <button class="tartiary">Button Here</button>
+          </div>
+        </div>
+        <div class="space-y-5">
+          <h3>Link</h3>
+          <Link text="Link" href="/" icon={{name: "carbon:home", side: "right"}} classes="flex gap-2"/>
+        </div>
+        <div class="w-full">
+          <h3 class="mb-5">Outline Buttons</h3>
+        <div class="flex items-center justify-center gap-5">
+        <button class="outlined_primary">Button Here</button>
+        <button class="outlined_secondary">Button Here</button>
+        <button class="outlined_tartiary">Button Here</button>
+        </div>
+        </div>
+      </div>
+      <div class="mt-10">
+        <Card />
+      </div>
+    </div>
+  </section>

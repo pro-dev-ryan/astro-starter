@@ -1,0 +1,37 @@
+---
+import BaseHead from "../components/shared/BaseHead.astro";
+import Navigation from "@component/shared/Navigation.astro";
+import "@fontsource-variable/inter";
+import "@fontsource/roboto";
+import "@fontsource-variable/public-sans";
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource-variable/exo-2";
+import "../styles/base.css";
+import "../styles/colors.css"
+import "../styles/globals.css";
+import "../styles/styles.css"
+// import "../styles/responsive.css";
+const { title } = Astro.props;
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/js/gsap.js" is:inline></script>
+    <script src="/js/gsap-scroll-trigger.js" is:inline></script>
+    <script src="/js/gsap-split-text.js" is:inline></script>
+    <BaseHead title={title} />
+  </head>
+  <body>
+    <Navigation />
+    <slot />
+    <!-- your content is injected here -->
+    <!-- <Footer /> -->
+  </body>
+  <style>
+
+  </style>
+</html>

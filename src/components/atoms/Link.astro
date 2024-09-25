@@ -1,0 +1,43 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    text: string,
+    href: string,
+    style?: "primary" | "secondary" | "tartiary",
+    isBordered?: "outlined_primary" | "outlined_secondary" | "outlined_tartiary",
+    icon ?: {
+        name: string,
+        side: "left" | "right"
+    },
+    classes?: string
+}
+
+
+
+const {text, href, style, isBordered, icon, classes, ...rest} = Astro.props as Props
+---
+<a
+href={href}
+class:list={[
+    "link",
+    style,
+    classes,
+    isBordered
+]}
+{...rest}
+>
+{
+    icon && icon.side === "left" && <Icon name={icon.name} width={24} height={24}  />
+}
+
+<span>{text}</span>
+
+{
+    icon && icon.side === "right" && <Icon name={icon?.name} width={24} height={24}   />
+}
+</a>
+
+<style>
+
+</style>

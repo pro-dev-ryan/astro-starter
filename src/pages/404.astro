@@ -1,0 +1,17 @@
+---
+import Link from "@component/atoms/Link.astro";
+import BaseLayout from "src/layouts/baseLayout.astro";
+---
+<BaseLayout title="Not Found">
+    <div class="content-panel">
+        <div class="flex flex-col items-center mt-[7.5rem] justify-center gap-4 lg:gap-8">
+            <h5>Oops! This is the <span>Wrong</span> Door</h5>
+        <Link text="Go Home" aria-label="Go Home" href="/" style="primary" classes="link flex items-center gap-2 w-fit"
+        icon={{name:"carbon:home", side:"right"}}/>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+
+</style>

@@ -1,0 +1,20 @@
+---
+import Card from "@component/atoms/Card.astro";
+import BaseLayout from "src/layouts/baseLayout.astro";
+const posts = await fetch('https://dummyjson.com/posts');
+const datas = await posts.json()
+
+---
+<BaseLayout title="Blog">
+<section class="content-element">
+    <h2 class="text-center mb-20">Blog Page</h2>
+    <div class="flex flex-wrap items-center justify-center gap-5">
+        <!-- {datas.posts.map((item:any) => <p>{item.title}</p>)} -->
+        {datas?.posts?.map((item:object) => <Card item={item} />)}
+    </div>
+</section>
+</BaseLayout>
+
+<style>
+
+</style>

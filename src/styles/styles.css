@@ -1,0 +1,62 @@
+/***************** common styles  ******************/
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--body-text);
+  background: var(--theme-color);
+  font-family: var(--primary-font);
+}
+
+h2 {
+  font-size: clamp(2.25rem, 1.8967rem + 2.3913cqi, 3.75rem);
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.2rem;
+  color: var(--secondary);
+}
+
+h3 {
+  font-size: clamp(2rem, 1.1413rem + 3.0435cqi, 3rem);
+  font-weight: 600;
+  line-height: normal;
+}
+
+h4 {
+  font-size: clamp(1.75rem, 1.1413rem + 3.0435cqi, 2.5rem);
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.1rem;
+}
+
+h5 {
+  font-size: clamp(1.5rem, 0.69rem + 2.8cqi, 2rem);
+  font-weight: 600;
+  line-height: normal;
+  color: var(--secondary);
+  letter-spacing: -0.1rem;
+}
+
+h6 {
+  font-size: clamp(1.25rem, 0.8152rem + 2.1739cqi, 1.5rem);
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0rem;
+}
+
+h1 > span,
+h2 > span,
+h3 > span,
+h4 > span,
+h5 > span,
+h6 > span {
+  color: var(--primary);
+}
+
+/* components  */
+.card:hover figure img {
+  transform: scale(1);
+}
+.card:hover h5 {
+  color: var(--body-text);
+}
