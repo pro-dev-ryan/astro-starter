@@ -12,7 +12,7 @@ import { formatDate } from "src/scripts/utils";
 
 const {item} = Astro.props;
 
-const {title, body, tags, author, date, id} = item as blogProps;
+const {title , body, tags, author, date, id} = item as blogProps;
 
 ---
 
@@ -22,7 +22,7 @@ const {title, body, tags, author, date, id} = item as blogProps;
             <img src="https://s46675.pcdn.co/wp-content/uploads/2015/12/nigth-cityscape-01.jpg" alt="" class="w-full h-[300px] transition-transform scale-110">
           </figure>
           <div class="p-4">
-          <h5>{title} <span class="pl-2 tracking-tight text-base text-[var(--body-text)]">By</span></h5>
+          <h5>{title ? title : "this is title"} <span class="pl-2 tracking-tight text-base text-[var(--body-text)]">By</span></h5>
           <small>{author ? author : "Mr. Author"} || Published At {date && formatDate(date)}</small>
           <div class="flex flex-col justify-between h-full">
             <p class="mt-4">{body.length > 100 && body.split("",100 ).join("") }...</p>

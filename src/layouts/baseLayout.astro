@@ -11,7 +11,7 @@ import "../styles/base.css";
 import "../styles/colors.css"
 import "../styles/globals.css";
 import "../styles/styles.css"
-// import "../styles/responsive.css";
+import Footer from "@component/shared/Footer.astro";
 const { title } = Astro.props;
 
 ---
@@ -29,7 +29,7 @@ const { title } = Astro.props;
     <Navigation />
     <slot />
     <!-- your content is injected here -->
-    <!-- <Footer /> -->
+    <Footer />
   </body>
   <style>
 
